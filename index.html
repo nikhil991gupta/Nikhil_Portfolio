@@ -277,7 +277,7 @@
           <div class="desc">
             <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
               <div class="btns">
-              <a href="https://nikhil-portfolio-six.vercel.app/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+              <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
               <a href="" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
             </div>
           </div>
@@ -331,31 +331,33 @@
         </div>
       </div>
       <div class="box tilt">
-        <img draggable="false" src="./assets/images/projects/Twiteer-backend.jpg" alt="" />
+        <img draggable="false" src="./assets/images/projects/dijikstras.png" alt="" />
           <div class="content">
             <div class="tag">
-              <h3>Twiteer Backend</h3>
+              <h3>dijikstras</h3>
             </div>
           <div class="desc">
-            <p>This project is focus on building  a backend for a social media platform Twiteer where users can create Tweets,Hashtags,comments and likes the tweets</p>
+            <p> the shortest path from a single source vertex to all other vertices in a given graph</p>
               <div class="btns">
-              <a href="https://github.com/nikhil991gupta/Twitter-Backend" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-              <a href="https://github.com/nikhil991gupta/Twitter-Backend" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+              <a href="https://leafy-longma-954a4b.netlify.app/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+              <a href="https://github.com/nikhil991gupta/dijikstras" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
             </div>
           </div>
         </div>
       </div>
       <div class="box tilt">
-        <img draggable="false" src="./assets/images/projects/project2Educa.png" alt="" />
+        <img draggable="false" src="./assets/images/projects/Tree-Vis.png" alt="" />
           <div class="content">
             <div class="tag">
-              <h3>Educa</h3>
+              <h3>Tree-Visualizer
+              </h3>
             </div>
           <div class="desc">
-            <p>Educa: Your go-to platform for computer science students, offering curated resources to enhance your studies </p>
+            <p>framework for dynamically visualizing binary trees and arrays on a webpage, facilitating interactive exploration and understanding of these data structures.
+            </p>
               <div class="btns">
-              <a href="https://nikhil991gupta.github.io/Educa/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-              <a href="https://github.com/nikhil991gupta/Educa" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+              <a href="https://tree-visualizer-3ol0un9pq-nikhil991gupta.vercel.app/" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+              <a href="https://github.com/nikhil991gupta/Tree-Visualizer" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
             </div>
           </div>
         </div>
@@ -526,12 +528,10 @@
           <i class="fas fa-comment-dots"></i>
           </div>
           </div>
-          <div class="button-area">
-            <button type="submit">
-              Submit <i class="fa fa-paper-plane"></i><a href="mailto:nikhil991gupta@gmail.com"></a>
-            </button>
-          </div>
-          
+        <div class="button-area">
+          <button type="submit" >
+            Submit <i class="fa fa-paper-plane"></i><a href="mailto : nikhil991gupta@gmail.com"></a></button>
+        </div>
       </form>
     </div>
     </div>
@@ -606,8 +606,27 @@
         type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
       ></script>
-  
-  <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+      <script>
+        emailjs.init('YOUR_USER_ID'); // Initialize with your EmailJS User ID
+      
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent the default form submit behavior
+      
+          // Send the form data to EmailJS
+          emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            .then(function(response) {
+              console.log('SUCCESS!', response.status, response.text);
+              // Optionally, you can display a success message to the user
+              alert('Your message has been sent successfully!');
+              // Clear the form fields
+              document.getElementById('contact-form').reset();
+            }, function(error) {
+              console.log('FAILED...', error);
+              // Optionally, you can display an error message to the user
+              alert('There was an error sending your message. Please try again later.');
+            });
+        });
+      </script>  <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
   
   <script src="./assets/js/script.js"></script>
    
