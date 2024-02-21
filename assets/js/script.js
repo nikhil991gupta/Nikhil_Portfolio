@@ -60,7 +60,7 @@ document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
             document.title = "Portfolio | Nikhil Gupta";
-            $("#favicon").attr("href", "assets/images/hero-modified.png");
+            $("#favicon").attr("href", "assets/images/.png");
         }
         else {
             document.title = "Come Back To Portfolio";
